@@ -2,7 +2,7 @@
 * NAME - a simple frontent to btparse
 *
 * Author: Jesse McClure, copyright 2013
-* License: GPLv3
+* License: GPLv2
 \************************************************/
 
 #include <stdlib.h>
