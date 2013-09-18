@@ -66,6 +66,16 @@ int main(int argc, const char **argv) {
 		/* print selected fields, or all fields */
 		field = NULL;
 		if (!ps || pe - ps > 1) printf("\n");
+if (!ps)
+printf("key:%*s%s\n",10-3,"",bt_entry_key(entry));
+else for (i = ps; i < pe; i++) {
+if (strcasestr("key",argv[i])) {
+	if (pe - ps > 1)
+	printf("key:%*s%s\n",10-3,"",bt_entry_key(entry));
+	else
+	printf("%s\n",bt_entry_key(entry));
+}
+}
 		while ( (field=bt_next_field(entry,field,&name)) ) { 
 			for (i = ps; i < pe; i++) {
 				str = bt_get_text(field);
